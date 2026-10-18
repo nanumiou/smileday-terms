@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmileDay - 이용약관 (Terms of Service)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f59e0b;
+            --primary-dark: #d97706;
+            --accent: #0f172a;
+            --bg-gradient: linear-gradient(135deg, #fefce8 0%, #f8fafc 50%, #f1f5f9 100%);
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #0f172a;
+            --text-sub: #475569;
+            --border-color: rgba(15, 23, 42, 0.08);
+            --badge-bg: #fef3c7;
+            --badge-text: #92400e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.75;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 48px 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 36px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--text-main);
+            background: rgba(0, 0, 0, 0.05);
+            font-weight: 600;
+        }
+
+        .lang-switch {
+            display: flex;
+            background: #f1f5f9;
+            padding: 3px;
+            border-radius: 10px;
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: #ffffff;
+            color: var(--text-main);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 5px 12px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+
+        .sub-title {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .last-updated {
+            color: #94a3b8;
+            font-size: 0.82rem;
+        }
+
+        section {
+            margin-bottom: 34px;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        .data-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 20px 22px;
+            border-radius: 12px;
+            margin-bottom: 14px;
+        }
+
+        .data-card h3 {
+            font-size: 0.98rem;
+            margin-bottom: 8px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 6px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            color: var(--text-sub);
+            font-size: 0.93rem;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 2px;
+            color: var(--primary-dark);
+            font-weight: bold;
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+
+        .disclaimer-box {
+            background: #fffbeb;
+            padding: 20px 22px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            margin: 18px 0;
+        }
+
+        .disclaimer-box h3 {
+            font-size: 1rem;
+            color: #92400e;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .disclaimer-box p {
+            margin-bottom: 0;
+            font-size: 0.93rem;
+            font-weight: 500;
+            color: #78350f;
+            line-height: 1.7;
+        }
+
+        .contact-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 20px 22px;
+            border-radius: 12px;
+            margin-top: 14px;
+        }
+
+        .contact-box p {
+            margin-bottom: 6px;
+        }
+
+        .contact-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-box strong {
+            color: var(--accent);
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.82rem;
+            color: #94a3b8;
+        }
+
+        [lang="ko"] .en-content {
+            display: none !important;
+        }
+
+        [lang="en"] .ko-content {
+            display: none !important;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 28px 18px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .data-card {
+                padding: 16px;
+            }
+        }
+    </style>
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            });
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.history.replaceState({}, '', url);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+
+            let targetLang = 'ko';
+            if (langParam === 'ko' || langParam === 'en') {
+                targetLang = langParam;
+            } else {
+                const userLang = navigator.language || navigator.userLanguage || '';
+                if (!userLang.startsWith('ko')) {
+                    targetLang = 'en';
+                }
+            }
+            setLanguage(targetLang);
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <div class="nav-links">
+                <a href="../privacy/index.html" class="nav-link">개인정보처리방침</a>
+                <a href="index.html" class="nav-link active">이용약관</a>
+            </div>
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" data-lang="ko" onclick="setLanguage('ko')">한국어</button>
+                <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')">English</button>
+            </div>
+        </nav>
+
+        <!-- ==========================================
+             KOREAN CONTENT (한국어)
+             ========================================== -->
+        <div class="ko-content">
+            <header>
+                <div class="logo-badge">📜 서비스 이용약관</div>
+                <h1>SmileDay</h1>
+                <p class="sub-title">이용약관</p>
+                <p class="last-updated">최종 수정일: 2026년 10월 18일</p>
+            </header>
+
+            <section>
+                <h2>1. 이용 안내 및 동의</h2>
+                <p>본 이용약관은 <strong>Franholdings(이하 "회사")</strong>가 제공하는 <strong>SmileDay(이하 "앱")</strong>의 이용과 관련하여 회사와 이용자 간의 기본적인 사항을 안내합니다.</p>
+                <p>앱을 설치하거나 이용하시는 경우 본 약관의 내용에 동의하시는 것으로 봅니다. 동의하지 않으실 경우 언제든지 앱을 삭제하고 이용을 중단하실 수 있습니다.</p>
+            </section>
+
+            <section>
+                <h2>2. 제공하는 서비스</h2>
+                <p>SmileDay는 사용자가 매일 긍정적인 미소를 짓고 마음의 안정을 찾을 수 있도록 돕는 웰니스 유틸리티 앱입니다.</p>
+                <ul>
+                    <li><strong>3초 미소 루틴:</strong> 전면 카메라를 통해 환한 미소를 지어 일일 루틴을 달성하는 기능</li>
+                    <li><strong>오늘의 응원 문장:</strong> 루틴 달성 시 제공되는 따뜻한 응원 글귀</li>
+                    <li><strong>어항 힐링 시뮬레이션:</strong> 미소 보상으로 획득한 먹이로 가상 물고기를 돌보고 테마를 꾸미는 기능</li>
+                    <li><strong>스마일 기록:</strong> 매일의 미소 달성 여부와 연속 성공 일수를 확인하는 기능</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. 중요 고지: 의료 기기가 아닙니다</h2>
+                <div class="disclaimer-box">
+                    <h3>건강 및 의료 면책 안내</h3>
+                    <p>본 앱은 일상적인 기분 전환과 건강한 생활 습관 형성을 돕기 위한 <strong>일반 웰니스 유틸리티</strong>입니다.<br><br>
+                    본 앱은 우울증, 안면 신경 질환 등 <strong>어떠한 신체적·정신적 질환의 진단이나 치료를 위한 의료 기기가 아니며</strong>, 전문 의료인의 상담이나 진료를 대신할 수 없습니다. 건강상 이상 증상이 있는 경우 반드시 전문 의료기관을 방문해 주시기 바랍니다.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. 카메라 사용 안내</h2>
+                <ul>
+                    <li>카메라 화면은 오직 실시간 미소 감지에만 순간적으로 활용됩니다.</li>
+                    <li><strong>카메라로 비치는 영상이나 사진은 어디에도 저장되지 않으며, 외부 서버로 전송되지 않습니다.</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. 기기 내 데이터 저장 및 복구 불가 안내</h2>
+                <ul>
+                    <li>사용자의 개인정보 보호를 위해 모든 활동 데이터(연속 달성일수, 어항 속 물고기와 코인 등)는 별도의 회원가입 없이 <strong>사용자의 스마트폰에만 저장</strong>됩니다.</li>
+                    <li>따라서 <strong>앱을 삭제하거나 기기를 변경/초기화하는 경우 기기에 저장되어 있던 모든 데이터는 소실되며 복구되지 않으므로</strong> 유의해 주시기 바랍니다.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. 저작권 보호</h2>
+                <p>앱 내에 포함된 그래픽 디자인, 캐릭터, 응원 문구, 소프트웨어 프로그램에 대한 저작권은 회사에 있습니다. 회사의 사전 동의 없이 콘텐츠를 무단 복제하거나 상업적으로 이용하실 수 없습니다.</p>
+            </section>
+
+            <section>
+                <h2>7. 문의처</h2>
+                <p>서비스 이용과 관련하여 궁금한 점이 있으시면 언제든지 문의해 주세요.</p>
+                <div class="contact-box">
+                    <p><strong>운영사:</strong> Franholdings</p>
+                    <p><strong>이메일:</strong> <a href="mailto:support@franholdings.cloud">support@franholdings.cloud</a></p>
+                </div>
+            </section>
+
+            <div class="footer">
+                &copy; 2026 Franholdings. All rights reserved.
+            </div>
+        </div>
+
+        <!-- ==========================================
+             ENGLISH CONTENT (English)
+             ========================================== -->
+        <div class="en-content">
+            <header>
+                <div class="logo-badge">📜 Terms of Service</div>
+                <h1>SmileDay</h1>
+                <p class="sub-title">Terms of Service</p>
+                <p class="last-updated">Last Updated: October 18, 2026</p>
+            </header>
+
+            <section>
+                <h2>1. Acceptance of Terms</h2>
+                <p>These Terms of Service govern your use of the <strong>SmileDay</strong> mobile application provided by <strong>Franholdings ("Company", "we")</strong>.</p>
+                <p>By downloading or using the App, you agree to these Terms. If you do not agree, you can stop using and uninstall the App at any time.</p>
+            </section>
+
+            <section>
+                <h2>2. Services Provided</h2>
+                <p>SmileDay is a personal wellness utility designed to encourage positive daily smile habits:</p>
+                <ul>
+                    <li><strong>3-Second Smile Routine:</strong> Complete a simple daily routine by smiling in front of the camera.</li>
+                    <li><strong>Daily Cheering Quotes:</strong> Heartwarming messages unlocked upon completing your routine.</li>
+                    <li><strong>Aquarium Simulation:</strong> A relaxing virtual aquarium where you feed fish and collect themes using earned rewards.</li>
+                    <li><strong>Smile History:</strong> Track your daily completions and habit streaks.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Important Disclaimer: Not a Medical Device</h2>
+                <div class="disclaimer-box">
+                    <h3>Health and Medical Disclaimer</h3>
+                    <p>SmileDay is a <strong>general wellness and habit utility</strong> intended to support everyday emotional positivity.<br><br>
+                    <strong>SmileDay is NOT a medical device.</strong> The App is not designed or intended to diagnose, treat, or prevent any mental health conditions or physical disorders, and it is not a substitute for professional clinical advice. Please consult a qualified medical professional for any health concerns.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Camera Usage</h2>
+                <ul>
+                    <li>Camera frames are used solely in real time to detect your smile during routines.</li>
+                    <li><strong>Camera videos and photos are never uploaded to any server and are never saved to your device.</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. On-Device Storage & Data Irrecoverability</h2>
+                <ul>
+                    <li>To protect your privacy, all progress data (streaks, coins, fish, settings) is <strong>stored strictly on your personal smartphone</strong> without requiring an account.</li>
+                    <li>Please note that <strong>uninstalling the App or resetting your device will permanently erase all local data</strong>, and it cannot be recovered.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Intellectual Property</h2>
+                <p>All designs, illustrations, character assets, quotes, and software code are the intellectual property of the Company. You may not copy, distribute, or commercially use any content without prior permission.</p>
+            </section>
+
+            <section>
+                <h2>7. Contact Information</h2>
+                <p>If you have questions regarding these Terms, please contact us:</p>
+                <div class="contact-box">
+                    <p><strong>Company:</strong> Franholdings</p>
+                    <p><strong>Email:</strong> <a href="mailto:support@franholdings.cloud">support@franholdings.cloud</a></p>
+                </div>
+            </section>
+
+            <div class="footer">
+                &copy; 2026 Franholdings. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
